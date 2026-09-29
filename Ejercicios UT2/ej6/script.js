@@ -14,26 +14,17 @@ else
 function primeraComprobacion()
 {
 	let num = Number(prompt("¿Cuánto llevas contigo?", ""));
-	if (num < 50)
-		return (false);
-	else
-		return (true);
+	return (num >= 50);
 }
 
 function segundaComprobacion()
 {
 	let confirmacion = confirm("¿Eres sincero?");
-	if (!confirmacion)
-		return (false);
-	else
-		return (true);
+	return (confirmacion);
 }
 
 function terceraComprobacion()
 {
 	let str = prompt("¿Qué responderías si te pregunto si puedes entrar en mayúsculas?", "");
-	if (str != "SÍ")
-		return (false);
-	else
-		return (true);
+	return (str == "SÍ");
 }
