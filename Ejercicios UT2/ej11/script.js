@@ -1,10 +1,6 @@
 // Lo único que no hay un momento para ver el desarrollo antes del siguiente confirm
 // No se imprime nada hasta que no terminen los confirm()
 
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function main()
 {
 	const multiplo = 3;
