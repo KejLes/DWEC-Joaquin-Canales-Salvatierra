@@ -1,8 +1,11 @@
 
 function main()
 {
-	const usuario_invitado = "Invitado";
-	usuario = prompt("Introduce tu usuario") ?? usuario_invitado ?? "Ánonimo";
+	const nombreInvitado = "Invitado";
+	let nombrePrompt = prompt("Introduce tu nombre");
+
+	usuario = nombrePrompt ?? nombreInvitado ?? "Ánonimo";
+	usuario = nombrePrompt || nombreInvitado || "Ánonimo";
 	alert("Has entrado ", usuario);
 }
 
