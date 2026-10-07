@@ -1,4 +1,6 @@
 
+"use strict";
+
 /**
  * Expresión de función.
  * Sirve para comprobar si la cadena está en blanco.
