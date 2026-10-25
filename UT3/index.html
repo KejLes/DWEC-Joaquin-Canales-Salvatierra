@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<script src="initial_page_script.js" defer></script>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Portada</title>
+	</head>
+	<body>
+		<h2>Juego</h2>
+
+		<p>Requisitos: tener 13 años o más.</p>
+
+		<form id="form">
+			<lab for="name">Nombre: </lab>
+			<input type="text" name="name" id="name" required>
+			<br>
+			<lab for="birthdate">Edad: </lab>
+			<input type="date" name="birthdate" id="birthdate" required>
+			<br>
+			<button onclick="submit">Enviar</button>
+		</form>
+
+		<p id="message" class="hidden"></p>
+	</body>
+</html>
