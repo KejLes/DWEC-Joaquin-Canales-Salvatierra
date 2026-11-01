@@ -1,14 +1,23 @@
 "use strict";
 
 const form = document.getElementById("form");
-const birthdate = document.getElementById("birthdate");
+const nameInput = document.getElementById("name");
+const birthdateInput = document.getElementById("birthdate");
 const message = document.getElementById("message");
 
 form.addEventListener("submit", function (event) {
 	event.preventDefault();
 
-	const bornDay = new Date(birthdate.value);
+	const name = nameInput.value.trim();
+	const bornDay = new Date(birthdateInput.value);
 	const today = new Date();
+
+	if (name === "" || isNaN(bornDay.getTime()) || bornDay > today) {
+		message.textContent = "Acceso denegado";
+		message.classList.remove("hidden");
+		message.classList.add("error");
+		return;
+	}
 
 	let calculatedAge = today.getFullYear() - bornDay.getFullYear();
 	const month = today.getMonth() - bornDay.getMonth();
@@ -18,16 +27,14 @@ form.addEventListener("submit", function (event) {
 	}
 
 	if (calculatedAge < 13) {
-		message.textContent = "No es apto para menores de 13 años.";
+		message.textContent = "Acceso denegado";
 		message.classList.remove("hidden");
 		message.classList.add("error");
 		return;
 	}
 
-	message.textContent = "";
-	message.classList.add("hidden");
-	message.classList.remove("error");
+	sessionStorage.setItem("playerName", name);
+	sessionStorage.setItem("playerAge", calculatedAge);
 
-	window.location.href = "game.html";
-
+	window.location.href = "panel.html";
 });
