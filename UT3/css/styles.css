@@ -1,9 +1,93 @@
-.hidden {
-  display: none;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 360px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3d8b40;
+}
+
+#playerName,
+#playerAge {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.mensaje {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .error {
-  display: block;
-  color: red;
-  font-weight: bold;
+  background-color: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+}
+
+.oculto {
+  display: none;
 }
