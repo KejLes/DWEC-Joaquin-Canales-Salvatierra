@@ -3,27 +3,33 @@
 
 <head>
 	<meta charset="utf-8">
-	<script src="initial_page_script.js" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Acceso al juego</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<title>Portada</title>
+	<script src="js/initial-page-script.js" defer></script>
 </head>
 
 <body>
-	<h2>Juego</h2>
 
-	<p>Requisitos: tener 13 años o más.</p>
+	<main class="contenedor">
+		<section class="tarjeta">
+			<h1>Acceso al juego</h1>
+			<p>Introduce tus datos para continuar.</p>
 
-	<form id="form">
-		<label for="name">Nombre: </label>
-		<input type="text" name="name" id="name" required>
-		<br>
-		<label for="birthdate">Fecha de nacimiento: </label>
-		<input type="date" name="birthdate" id="birthdate" required>
-		<br>
-		<button type="submit">Enviar</button>
-	</form>
+			<form id="form">
+				<label for="name">Nombre</label>
+				<input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-	<p id="message" class="hidden"></p>
+				<label for="birthdate">Fecha de nacimiento</label>
+				<input type="date" id="birthdate" name="birthdate" required>
+
+				<button type="submit">Entrar</button>
+			</form>
+
+			<p id="message" class="mensaje oculto"></p>
+		</section>
+	</main>
+
 </body>
 
 </html>
